@@ -21,7 +21,7 @@ public class Estado implements Serializable{
 	private Integer id;
 	private String nome;
 	
-	@JsonBackReference //não pode serializar a cidade
+	@JsonBackReference //não pode serializar a cidade+
 	@OneToMany(mappedBy = "estado")
 	private List<Cidade> cidades = new ArrayList<>();
 	
